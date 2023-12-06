@@ -83,7 +83,7 @@ class TfSequenceExampleDecoderTest(test_case.TestCase):
         num_frames, image_height, image_width)
 
     def graph_fn():
-      label_map_proto_file = os.path.join(self.get_temp_dir(), 'labelmap.pbtxt')
+      label_map_proto_file = os.path.join(self.get_temp_dir(), 'label_map.pbtxt')
       self._create_label_map(label_map_proto_file)
       decoder = tf_sequence_example_decoder.TfSequenceExampleDecoder(
           label_map_proto_file=label_map_proto_file)
@@ -146,7 +146,7 @@ class TfSequenceExampleDecoderTest(test_case.TestCase):
         num_frames, image_height, image_width)
 
     def graph_fn():
-      label_map_proto_file = os.path.join(self.get_temp_dir(), 'labelmap.pbtxt')
+      label_map_proto_file = os.path.join(self.get_temp_dir(), 'label_map.pbtxt')
       self._create_label_map(label_map_proto_file)
       decoder = tf_sequence_example_decoder.TfSequenceExampleDecoder(
           label_map_proto_file=label_map_proto_file,
@@ -215,7 +215,7 @@ class TfSequenceExampleDecoderTest(test_case.TestCase):
         num_frames, image_height, image_width)
 
     def graph_fn():
-      label_map_proto_file = os.path.join(self.get_temp_dir(), 'labelmap.pbtxt')
+      label_map_proto_file = os.path.join(self.get_temp_dir(), 'label_map.pbtxt')
       self._create_label_map(label_map_proto_file)
       decoder = tf_sequence_example_decoder.TfSequenceExampleDecoder(
           label_map_proto_file=label_map_proto_file,
@@ -295,7 +295,7 @@ class TfSequenceExampleDecoderTest(test_case.TestCase):
           ]).SerializeToString()
       example_string_tensor = tf.convert_to_tensor(sequence_example_serialized)
 
-      label_map_proto_file = os.path.join(self.get_temp_dir(), 'labelmap.pbtxt')
+      label_map_proto_file = os.path.join(self.get_temp_dir(), 'label_map.pbtxt')
       self._create_label_map(label_map_proto_file)
       decoder = tf_sequence_example_decoder.TfSequenceExampleDecoder(
           label_map_proto_file=label_map_proto_file)
