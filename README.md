@@ -1,5 +1,7 @@
 Using the tensorflow base, I created an Object Detection model that detects Sign Language for the letters A, B, and C.
 
+Work within the research\object_detection\ director.
+
 To run you need to set up a conda virtual environment, install protobuf and run the protobuff_initalizer.py script. 
 
 Then you need to run the setup.py
